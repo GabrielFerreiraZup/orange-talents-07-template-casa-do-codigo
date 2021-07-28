@@ -28,7 +28,8 @@ public class AutorDtoEntrada {
     public String getDescricao() {
         return descricao;
     }
-    public AutorDtoEntrada (){}
+
+    
 
 
     public AutorDtoEntrada (String nome,String email,String descricao){

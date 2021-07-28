@@ -40,7 +40,7 @@ public class Autor {
     public LocalDateTime getInstante() {
         return instante;
     }
-
+    @Deprecated
     public Autor(){}
 
     public Autor(String nome,String email,String descricao){
