@@ -17,6 +17,10 @@ public class Categoria {
 
     private String nome;
 
+    public String getNome() {
+        return nome;
+    }
+
     @Deprecated
     public Categoria(){}
 

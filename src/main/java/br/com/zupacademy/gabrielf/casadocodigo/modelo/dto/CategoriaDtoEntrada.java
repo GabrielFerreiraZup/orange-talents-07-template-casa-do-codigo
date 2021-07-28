@@ -6,15 +6,20 @@ import javax.validation.constraints.NotBlank;
 
 public class CategoriaDtoEntrada {
 
-    @NotBlank
-
+    @NotBlank(message = "Nome nao pode ser nulo")
     private String nome;
+
+    public String getNome() {
+        return nome;
+    }
+
+    public CategoriaDtoEntrada(){}
 
     public CategoriaDtoEntrada(String nome){
         this.nome = nome;
     }
 
-    public Categoria convertToCategoria(String nome){
-        return new Categoria(nome);
+    public Categoria convertToCategoria(){
+        return new Categoria(this.nome);
     }
 }
