@@ -1,6 +1,7 @@
 package br.com.zupacademy.gabrielf.casadocodigo.modelo.dto;
 
 import br.com.zupacademy.gabrielf.casadocodigo.modelo.Autor;
+import br.com.zupacademy.gabrielf.casadocodigo.validation.UniqueEmail;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -11,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class AutorDtoEntrada {
     @NotBlank
     private String nome;
-    @Email @NotBlank
+    @Email @NotBlank @UniqueEmail
     private String email;
     @NotBlank @Length(max = 400)
     private String descricao;
@@ -29,7 +30,7 @@ public class AutorDtoEntrada {
         return descricao;
     }
 
-    
+
 
 
     public AutorDtoEntrada (String nome,String email,String descricao){
