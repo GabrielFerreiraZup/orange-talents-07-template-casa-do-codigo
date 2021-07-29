@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 public class AutorDtoEntrada {
     @NotBlank
     private String nome;
-    @Email @NotBlank @UniqueEmail
+    @Email(message = "Formato de e-mail inválido") @NotBlank @UniqueEmail(message = "E-mail deve ser único")
     private String email;
     @NotBlank @Length(max = 400)
     private String descricao;

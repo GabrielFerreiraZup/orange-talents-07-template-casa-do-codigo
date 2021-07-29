@@ -1,12 +1,14 @@
 package br.com.zupacademy.gabrielf.casadocodigo.modelo.dto;
 
 import br.com.zupacademy.gabrielf.casadocodigo.modelo.Categoria;
+import br.com.zupacademy.gabrielf.casadocodigo.validation.UniqueNome;
 
 import javax.validation.constraints.NotBlank;
 
 public class CategoriaDtoEntrada {
 
-    @NotBlank(message = "Nome nao pode ser nulo")
+    @NotBlank(message = "Nome deve ter um conteúdo")
+    @UniqueNome
     private String nome;
 
     public String getNome() {
