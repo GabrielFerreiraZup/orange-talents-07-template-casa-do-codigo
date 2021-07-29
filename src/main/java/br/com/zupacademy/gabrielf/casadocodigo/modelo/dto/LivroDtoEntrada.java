@@ -90,7 +90,7 @@ public class LivroDtoEntrada {
         this.preco = preco;
         this.lsbn = lsbn;
         this.numero_paginas = numero_paginas;
-        
+
         this.idAutor = idAutor;
         this.idCategoria = idCategoria;
     }
