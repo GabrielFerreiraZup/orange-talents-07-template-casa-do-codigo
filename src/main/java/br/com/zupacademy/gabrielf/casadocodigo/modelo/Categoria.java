@@ -16,11 +16,11 @@ public class Categoria {
     private Long id;
 
     private String nome;
-/*
+
     public String getNome() {
         return nome;
     }
-*/
+
     @Deprecated
     public Categoria(){}
 

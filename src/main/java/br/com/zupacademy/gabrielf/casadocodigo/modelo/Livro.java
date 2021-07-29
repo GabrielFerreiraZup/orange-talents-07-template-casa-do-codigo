@@ -63,6 +63,10 @@ public class Livro {
         return autor;
     }
 
+    public String getSumario() {
+        return sumario;
+    }
+
     public void setDataLancamento(LocalDate dataLancamento) {
         this.dataLancamento = dataLancamento;
     }
@@ -83,5 +87,7 @@ public class Livro {
         //pega nome autor e coloca em um objeto
         //pega nome categoria e coloca em um objeto
     }
+
+
 
 }
