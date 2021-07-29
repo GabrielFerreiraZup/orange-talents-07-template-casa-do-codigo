@@ -12,6 +12,7 @@ public class UniqueNomeValidation implements ConstraintValidator<UniqueNome,Stri
     @Autowired
     CategoriaRepository categoriaRepository;
 
+
     @Override
     public void initialize(UniqueNome constraintAnnotation) {
 
@@ -19,6 +20,7 @@ public class UniqueNomeValidation implements ConstraintValidator<UniqueNome,Stri
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
+
         Optional<Categoria> optional = categoriaRepository.findByNome(value);
         if(optional.isEmpty()){
             return true;

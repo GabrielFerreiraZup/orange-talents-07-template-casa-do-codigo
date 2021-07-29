@@ -2,6 +2,7 @@ package br.com.zupacademy.gabrielf.casadocodigo.modelo.dto;
 
 import br.com.zupacademy.gabrielf.casadocodigo.modelo.Autor;
 import br.com.zupacademy.gabrielf.casadocodigo.validation.UniqueEmail;
+import br.com.zupacademy.gabrielf.casadocodigo.validation.UniqueGeneric;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -12,7 +13,9 @@ import javax.validation.constraints.NotNull;
 public class AutorDtoEntrada {
     @NotBlank
     private String nome;
-    @Email(message = "Formato de e-mail inválido") @NotBlank @UniqueEmail(message = "E-mail deve ser único")
+    @Email(message = "Formato de e-mail inválido")
+    @NotBlank
+    @UniqueGeneric(message = "E-mail deve ser único",domainClass = Autor.class,fieldName = "email")
     private String email;
     @NotBlank @Length(max = 400)
     private String descricao;
