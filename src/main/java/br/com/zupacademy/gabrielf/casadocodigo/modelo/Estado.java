@@ -1,16 +1,19 @@
 package br.com.zupacademy.gabrielf.casadocodigo.modelo;
 
+import br.com.zupacademy.gabrielf.casadocodigo.validation.UniqueEstadoName;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
+
 public class Estado {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank
+
     private String nome;
     @NotNull
     @ManyToOne
