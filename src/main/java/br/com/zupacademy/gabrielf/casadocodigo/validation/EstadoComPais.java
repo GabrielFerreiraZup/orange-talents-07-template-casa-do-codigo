@@ -10,10 +10,10 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = UniqueEstadoNameValidator.class)
-public @interface UniqueEstadoName {
-    String message() default "Estado deve ser único nesse país";
+@Constraint(validatedBy = EstadoComPaisValidation.class)
+public @interface EstadoComPais {
+
+    String message() default "Estado invalido nesse pais";
     Class<?>[] groups() default {};
     public abstract Class<? extends Payload>[] payload() default {};
-
 }
